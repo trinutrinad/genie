@@ -163,7 +163,6 @@ export default function CategoryServicesPage() {
             </div>
             <div>
               <h1 className="text-3xl font-bold text-gray-900">{categoryData.name}</h1>
-              <p className="text-gray-600">{categoryData.nameHi}</p>
             </div>
           </div>
           <p className="text-gray-600">
