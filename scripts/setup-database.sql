@@ -1,4 +1,4 @@
--- Complete Database Setup Script for Gaon Seva
+-- Complete Database Setup Script for Genie
 -- Copy and paste this entire script into Supabase SQL Editor
 -- Or run section by section if you prefer
 

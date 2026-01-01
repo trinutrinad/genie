@@ -17,7 +17,6 @@ export enum ServiceCategory {
 export const SERVICE_CATEGORIES = {
   [ServiceCategory.HOME_REPAIR]: {
     name: 'Home Repair & Maintenance',
-    nameHi: 'घर की मरम्मत और रखरखाव',
     icon: 'wrench',
     services: [
       'Electrician',
@@ -29,7 +28,6 @@ export const SERVICE_CATEGORIES = {
   },
   [ServiceCategory.AGRICULTURE]: {
     name: 'Agriculture Essentials',
-    nameHi: 'कृषि सामग्री',
     icon: 'sprout',
     services: [
       'Tractor rental (with driver)',
@@ -41,7 +39,6 @@ export const SERVICE_CATEGORIES = {
   },
   [ServiceCategory.HEALTHCARE]: {
     name: 'Healthcare',
-    nameHi: 'स्वास्थ्य सेवा',
     icon: 'heart-pulse',
     services: [
       'Doctor home visits',
@@ -53,7 +50,6 @@ export const SERVICE_CATEGORIES = {
   },
   [ServiceCategory.TRANSPORT]: {
     name: 'Transport',
-    nameHi: 'परिवहन',
     icon: 'truck',
     services: [
       'Goods vehicle/tempo',
@@ -64,7 +60,6 @@ export const SERVICE_CATEGORIES = {
   },
   [ServiceCategory.EVENT_SERVICES]: {
     name: 'Event Services',
-    nameHi: 'आयोजन सेवाएं',
     icon: 'calendar',
     services: [
       'DJ & sound system',
@@ -76,7 +71,6 @@ export const SERVICE_CATEGORIES = {
   },
   [ServiceCategory.PROFESSIONAL_HELP]: {
     name: 'Professional Help',
-    nameHi: 'पेशेवर सहायता',
     icon: 'briefcase',
     services: [
       'Government documentation (Aadhaar, PAN, schemes)',
@@ -87,7 +81,6 @@ export const SERVICE_CATEGORIES = {
   },
   [ServiceCategory.CONSTRUCTION]: {
     name: 'Construction',
-    nameHi: 'निर्माण',
     icon: 'hammer',
     services: [
       'JCB/excavator rental',
@@ -97,7 +90,6 @@ export const SERVICE_CATEGORIES = {
   },
   [ServiceCategory.EDUCATION]: {
     name: 'Education',
-    nameHi: 'शिक्षा',
     icon: 'graduation-cap',
     services: [
       'Home tutors',
@@ -107,7 +99,6 @@ export const SERVICE_CATEGORIES = {
   },
   [ServiceCategory.BEAUTY_PERSONAL]: {
     name: 'Beauty & Personal',
-    nameHi: 'सौंदर्य और व्यक्तिगत',
     icon: 'sparkles',
     services: [
       'Salon at home',
@@ -117,7 +108,6 @@ export const SERVICE_CATEGORIES = {
   },
   [ServiceCategory.SECURITY_INSTALLATION]: {
     name: 'Security & Installation',
-    nameHi: 'सुरक्षा और स्थापना',
     icon: 'shield',
     services: [
       'CCTV installation',
@@ -127,7 +117,6 @@ export const SERVICE_CATEGORIES = {
   },
   [ServiceCategory.DAILY_ESSENTIALS]: {
     name: 'Daily Essentials',
-    nameHi: 'दैनिक जरूरतें',
     icon: 'shopping-bag',
     services: [
       'LPG cylinder delivery',
@@ -137,7 +126,6 @@ export const SERVICE_CATEGORIES = {
   },
   [ServiceCategory.DIGITAL_SERVICES]: {
     name: 'Digital Services',
-    nameHi: 'डिजिटल सेवाएं',
     icon: 'smartphone',
     services: [
       'Mobile/DTH recharge',

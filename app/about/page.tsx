@@ -8,14 +8,14 @@ export default function AboutPage() {
 
       <div className="container mx-auto px-4 py-12">
         <div className="mx-auto max-w-3xl">
-          <h1 className="mb-6 text-4xl font-bold text-gray-900">About Gaon Seva</h1>
+          <h1 className="mb-6 text-4xl font-bold text-gray-900">About Genie</h1>
 
           <div className="prose prose-lg max-w-none">
             <section className="mb-8">
               <h2 className="mb-4 text-2xl font-semibold text-gray-900">Our Mission</h2>
               <p className="mb-4 text-gray-700">
-                Gaon Seva is dedicated to connecting rural communities with trusted local service
-                providers. We believe that everyone in rural India should have easy access to
+                Genie is dedicated to connecting communities with trusted local service
+                providers. We believe that everyone should have easy access to
                 quality services, from home repair to healthcare, agriculture to education.
               </p>
               <p className="text-gray-700">
@@ -30,7 +30,7 @@ export default function AboutPage() {
                 <li>12 major service categories covering all rural needs</li>
                 <li>Verified provider profiles with reviews and ratings</li>
                 <li>Direct contact via WhatsApp and phone calls</li>
-                <li>Hindi and English language support</li>
+                <li>Easy-to-use interface</li>
                 <li>Free registration for both customers and providers</li>
               </ul>
             </section>
@@ -38,7 +38,7 @@ export default function AboutPage() {
             <section className="mb-8">
               <h2 className="mb-4 text-2xl font-semibold text-gray-900">For Customers</h2>
               <p className="mb-4 text-gray-700">
-                Find trusted service providers in your village or nearby areas. Browse by category,
+                Find trusted service providers in your area. Browse by category,
                 read reviews, and contact providers directly. All providers are verified and rated
                 by the community.
               </p>

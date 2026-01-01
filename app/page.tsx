@@ -21,9 +21,9 @@ export default function Home() {
       <section className="container mx-auto px-4 py-16 md:py-24">
         <div className="mx-auto max-w-4xl text-center">
           <h1 className="mb-6 text-4xl font-bold tracking-tight text-gray-900 md:text-6xl">
-            Gaon Seva
+            Genie
             <br />
-            <span className="text-primary-600">आपके गांव की हर सेवा</span>
+            <span className="text-primary-600">Your Service Marketplace</span>
           </h1>
           <p className="mb-8 text-xl text-gray-600 md:text-2xl">
             Find trusted local service providers in your village. From home repair to agriculture,
@@ -67,7 +67,6 @@ export default function Home() {
                   <h3 className="mb-2 text-lg font-semibold text-gray-900">
                     {category.name}
                   </h3>
-                  <p className="mb-3 text-sm text-gray-600">{category.nameHi}</p>
                   <ul className="space-y-1 text-xs text-gray-500">
                     {category.services.slice(0, 3).map((service, idx) => (
                       <li key={idx}>• {service}</li>
@@ -181,7 +180,7 @@ export default function Home() {
       <section className="container mx-auto px-4 py-16">
         <div className="mb-12 text-center">
           <h2 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">
-            Why Choose Gaon Seva
+            Why Choose Genie
           </h2>
         </div>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
@@ -202,9 +201,9 @@ export default function Home() {
                 <MessageCircle className="h-8 w-8 text-primary-600" />
               </div>
             </div>
-            <h3 className="mb-2 text-xl font-semibold text-gray-900">Local Language Support</h3>
+            <h3 className="mb-2 text-xl font-semibold text-gray-900">Easy Communication</h3>
             <p className="text-gray-600">
-              Available in Hindi and English for easy communication
+              Direct contact with providers for seamless communication
             </p>
           </div>
           <div className="text-center">
@@ -272,7 +271,7 @@ export default function Home() {
           <div className="flex flex-col items-center justify-between md:flex-row">
             <div className="mb-4 md:mb-0">
               <p className="text-sm text-gray-600">
-                © {new Date().getFullYear()} Gaon Seva. All rights reserved.
+                © {new Date().getFullYear()} Genie. All rights reserved.
               </p>
             </div>
             <div className="flex space-x-6 text-sm text-gray-600">

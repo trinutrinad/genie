@@ -6,9 +6,9 @@ import './globals.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Gaon Seva - आपके गांव की हर सेवा',
-  description: 'Find local service providers in your village. From home repair to agriculture, healthcare to transport - connect with trusted providers.',
-  keywords: 'rural services, village services, service providers, India, agriculture, healthcare, transport',
+  title: 'Genie - Your Service Marketplace',
+  description: 'Find local service providers in your area. From home repair to agriculture, healthcare to transport - connect with trusted providers.',
+  keywords: 'services, service providers, marketplace, agriculture, healthcare, transport',
 };
 
 export default function RootLayout({

@@ -1,4 +1,4 @@
-# Deployment Guide for Gaon Seva
+# Deployment Guide for Genie
 
 ## Current Setup
 - **Backend**: Supabase (already deployed ✅)

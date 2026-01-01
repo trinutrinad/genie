@@ -1,4 +1,4 @@
-# Database Schema for Gaon Seva
+# Database Schema for Genie
 
 This document contains the SQL commands to set up your Supabase database.
 

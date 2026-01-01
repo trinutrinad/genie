@@ -1,6 +1,6 @@
-# Supabase Setup Guide for Gaon Seva
+# Supabase Setup Guide for Genie
 
-This guide will help you connect your Supabase project to the Gaon Seva application.
+This guide will help you connect your Supabase project to the Genie application.
 
 ## Step 1: Get Your Supabase Credentials
 

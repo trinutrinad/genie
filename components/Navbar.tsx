@@ -15,7 +15,7 @@ export const Navbar = () => {
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
             <span className="text-2xl font-bold text-primary-600">
-              Gaon Seva
+              Genie
             </span>
           </Link>
 

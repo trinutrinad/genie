@@ -1,10 +1,10 @@
-# Gaon Seva - Rural Services Marketplace
+# Genie - Service Marketplace
 
-A comprehensive platform connecting rural communities with local service providers. Built with Next.js 14, TypeScript, Tailwind CSS, and Supabase.
+A comprehensive platform connecting communities with local service providers. Built with Next.js 14, TypeScript, Tailwind CSS, and Supabase.
 
 ## 🎯 Overview
 
-Gaon Seva (गाँव सेवा) is a rural services marketplace that helps villagers find trusted local service providers across 12 major categories:
+Genie is a service marketplace that helps users find trusted local service providers across 12 major categories:
 
 1. **Home Repair & Maintenance** - Electricians, plumbers, carpenters, masons, appliance repair
 2. **Agriculture Essentials** - Tractor rental, harvesting equipment, farm labor, soil testing
@@ -158,4 +158,4 @@ Built for rural communities in India to connect with local service providers and
 
 ## 📞 Support
 
-For support, email support@gaonseva.com or create an issue in the repository.
+For support, create an issue in the repository.

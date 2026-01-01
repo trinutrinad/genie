@@ -15,7 +15,7 @@ export default function PrivacyPage() {
             <section className="mb-8">
               <h2 className="mb-4 text-2xl font-semibold text-gray-900">Introduction</h2>
               <p className="text-gray-700">
-                Gaon Seva ("we", "our", or "us") is committed to protecting your privacy. This
+                Genie ("we", "our", or "us") is committed to protecting your privacy. This
                 Privacy Policy explains how we collect, use, and safeguard your personal
                 information.
               </p>

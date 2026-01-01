@@ -15,14 +15,14 @@ export default function TermsPage() {
             <section className="mb-8">
               <h2 className="mb-4 text-2xl font-semibold text-gray-900">Agreement to Terms</h2>
               <p className="text-gray-700">
-                By accessing or using Gaon Seva, you agree to be bound by these Terms of Service.
+                By accessing or using Genie, you agree to be bound by these Terms of Service.
                 If you disagree with any part of these terms, you may not access the service.
               </p>
             </section>
 
             <section className="mb-8">
               <h2 className="mb-4 text-2xl font-semibold text-gray-900">Use of Service</h2>
-              <p className="mb-4 text-gray-700">You agree to use Gaon Seva only for lawful purposes and in accordance with these Terms.</p>
+              <p className="mb-4 text-gray-700">You agree to use Genie only for lawful purposes and in accordance with these Terms.</p>
               <ul className="list-disc space-y-2 text-gray-700">
                 <li>You must provide accurate and complete information</li>
                 <li>You are responsible for maintaining the security of your account</li>
@@ -58,7 +58,7 @@ export default function TermsPage() {
             <section className="mb-8">
               <h2 className="mb-4 text-2xl font-semibold text-gray-900">Limitation of Liability</h2>
               <p className="text-gray-700">
-                Gaon Seva is a platform connecting customers with service providers. We are not
+                Genie is a platform connecting customers with service providers. We are not
                 responsible for the quality, safety, or legality of services provided by third-party
                 service providers.
               </p>
