@@ -143,7 +143,7 @@ export default function CategoryServicesPage() {
   const filteredProviders = (providers.length > 0 ? providers : dummyProviders).filter((provider: any) => {
     const matchesSearch = 
       provider.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      provider.specificServices.some((s) => s.toLowerCase().includes(searchQuery.toLowerCase()));
+      provider.specificServices.some((s: string) => s.toLowerCase().includes(searchQuery.toLowerCase()));
     
     const matchesLocation = !selectedLocation || provider.location === selectedLocation;
     
