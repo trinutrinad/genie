@@ -1,0 +1,30 @@
+Complete Free Tech Stack & Architecture
+Phase 1: Tech Stack (All Free)
+Frontend:
+
+React.js or Next.js - Modern, fast, free
+Tailwind CSS - For styling
+Deployment: Vercel or Netlify (Free tier)
+
+Backend:
+
+Node.js + Express - Free, popular
+Database:
+
+MongoDB Atlas (Free 512MB)
+OR Supabase (Free 500MB + Authentication)
+OR Firebase (Free Spark plan)
+
+
+Deployment:
+
+Render.com (Free tier)
+OR Railway.app (Free $5/month credit)
+OR Vercel (supports API routes)
+
+
+
+File Storage (for images):
+
+Cloudinary (Free 25GB)
+OR Supabase Storage (Free 1GB)

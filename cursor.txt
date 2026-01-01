@@ -1,0 +1,1909 @@
+Complete Free Tech Stack & Architecture
+Phase 1: Tech Stack (All Free)
+Frontend:
+
+React.js or Next.js - Modern, fast, free
+Tailwind CSS - For styling
+Deployment: Vercel or Netlify (Free tier)
+
+Backend:
+
+Node.js + Express - Free, popular
+Database:
+
+MongoDB Atlas (Free 512MB)
+OR Supabase (Free 500MB + Authentication)
+OR Firebase (Free Spark plan)
+
+
+Deployment:
+
+Render.com (Free tier)
+OR Railway.app (Free $5/month credit)
+OR Vercel (supports API routes)
+
+
+
+File Storage (for images):
+
+Cloudinary (Free 25GB)
+OR Supabase Storage (Free 1GB)
+
+
+Step-by-Step Build Plan
+Step 1: Project Setup (Day 1)
+What you'll build:
+
+Landing page
+Service provider registration
+Customer registration
+Service browsing page
+
+Free Tools:
+- Code Editor: VS Code (free)
+- Version Control: GitHub (free)
+- Design: Figma (free)
+
+Step 2: Frontend Structure
+Pages needed:
+
+Home Page - Browse services by category
+Service Provider Registration - Form to register
+Customer Registration - Simple signup
+Service Detail Page - Show provider details, ratings
+Booking Page - Request service
+Dashboard (Provider) - Manage bookings
+Dashboard (Customer) - View bookings
+
+Components:
+
+Navbar
+Service card
+Search/filter
+Rating system
+Contact button (WhatsApp/Call)
+
+
+Step 3: Backend Structure
+Database Collections:
+javascript1. Users {
+   - name
+   - phone
+   - location (village/block)
+   - role (customer/provider)
+   - verified
+}
+
+2. ServiceProviders {
+   - userId
+   - serviceCategory
+   - experience
+   - priceRange
+   - availability
+   - photos
+   - whatsappNumber
+   - aadharVerified
+}
+
+3. Bookings {
+   - customerId
+   - providerId
+   - serviceType
+   - date
+   - status (pending/confirmed/completed)
+   - location
+}
+
+4. Reviews {
+   - bookingId
+   - rating
+   - comment
+}
+```
+
+**API Routes needed:**
+```
+POST /api/register - User registration
+POST /api/login - User login
+GET /api/services - Get all service providers
+GET /api/services/:category - Filter by category
+GET /api/services/:id - Get provider details
+POST /api/booking - Create booking
+GET /api/bookings/:userId - Get user bookings
+POST /api/review - Add review
+GET /api/reviews/:providerId - Get provider reviews
+```
+
+---
+
+### **Step 4: Required APIs (All FREE)**
+
+**1. Authentication:**
+- **Supabase Auth** (Free) - Email/phone login
+- OR **Firebase Auth** (Free) - Google, phone OTP
+
+**2. SMS/WhatsApp (for notifications):**
+- **Twilio** - Free trial ($15 credit, then $0.0075/SMS)
+- **Fast2SMS** - Free 1000 SMS/day (India-specific)
+- **MSG91** - Free trial credits
+- **Alternative**: Just use WhatsApp click-to-chat (completely free, no API needed!)
+
+**3. Location/Maps:**
+- **Leaflet.js** + **OpenStreetMap** (Completely free)
+- OR **Google Maps API** (Free $200/month credit)
+
+**4. Payment (Optional for Phase 1):**
+- **Razorpay** - Free (2% transaction fee only)
+- **Phonepe Payment Gateway** - Free integration
+- **Start with Cash on Delivery** - No API needed!
+
+**5. Image Upload:**
+- **Cloudinary** (Free 25GB/month)
+- OR **Supabase Storage** (Free 1GB)
+
+**6. Email Notifications:**
+- **Resend** (Free 3000 emails/month)
+- **Brevo (Sendinblue)** (Free 300 emails/day)
+
+---
+
+## **Minimal Free Architecture (Recommended)**
+
+### **Option 1: Supabase (Easiest)**
+```
+Frontend: Next.js (Vercel - Free)
+Backend: Supabase (Free)
+  - Database: PostgreSQL
+  - Auth: Built-in
+  - Storage: Built-in
+  - Realtime: Built-in
+Payment: Start with Cash only
+Notifications: WhatsApp click-to-chat (Free)
+```
+
+**Cost: $0/month**
+**Limits:**
+- 500MB database
+- 1GB file storage
+- 50,000 monthly active users
+- 2GB bandwidth
+
+### **Option 2: Firebase (Also Easy)**
+```
+Frontend: React (Netlify - Free)
+Backend: Firebase (Free Spark plan)
+  - Database: Firestore
+  - Auth: Built-in
+  - Storage: Built-in
+  - Functions: 125K/month free
+```
+
+**Cost: $0/month**
+**Limits:**
+- 1GB storage
+- 10GB/month bandwidth
+- 50K reads, 20K writes per day
+
+### **Option 3: Custom Backend (More Control)**
+```
+Frontend: React (Netlify - Free)
+Backend: Node.js + Express (Render.com - Free)
+Database: MongoDB Atlas (Free 512MB)
+Storage: Cloudinary (Free 25GB)
+Auth: JWT (custom code)
+Cost: $0/month
+
+Phase 1 Features (MVP - Keep it Simple)
+What to build first (2-3 weeks):
+✅ Must Have:
+
+Service provider registration with basic details
+Service browsing by category
+Provider profile with phone/WhatsApp button
+Basic search/filter
+Click to call/WhatsApp (no in-app booking yet)
+
+❌ Skip for now:
+
+Complex booking system
+Payment integration
+In-app chat
+Real-time notifications
+Admin panel
+
+Why this works:
+
+Users can browse and contact providers directly
+Providers get leads
+You validate the idea
+No complex infrastructure needed
+
+
+Step-by-Step Build Process
+Week 1: Setup & Frontend
+
+Create GitHub repository
+Setup Next.js project with Tailwind
+Create basic pages (Home, Register, Browse)
+Design service cards and forms
+Deploy to Vercel
+
+Week 2: Backend & Database
+
+Setup Supabase/Firebase
+Create database schema
+Build authentication
+Create API routes
+Connect frontend to backend
+
+Week 3: Core Features
+
+Service provider registration flow
+Service browsing with filters
+Provider profile pages
+WhatsApp/Call integration
+Basic search functionality
+
+Week 4: Polish & Launch
+
+Add reviews/ratings
+Improve UI/UX
+Add location-based filtering
+Test with 5-10 real providers
+Launch in 1-2 villages
+
+
+Free Deployment Guide
+Frontend:
+bash# Deploy to Vercel (Free)
+1. Push code to GitHub
+2. Go to vercel.com
+3. Import GitHub repository
+4. Deploy (takes 2 minutes)
+Backend:
+bash# If using Render.com (Free)
+1. Create web service
+2. Connect GitHub repo
+3. Auto-deploys on every push
+```
+
+**Database:**
+- Supabase: Just sign up and create project
+- Firebase: Enable services from console
+- MongoDB: Create free cluster on Atlas
+
+---
+
+## **Estimated Costs**
+
+**Month 1-6: $0**
+- Everything runs on free tiers
+- Up to 500 users easily
+
+**After Growth (>1000 users):**
+- Supabase Pro: $25/month
+- OR Firebase Blaze: ~$5-20/month (pay as you go)
+- Domain: $10/year (.in domain)
+- SMS (if needed): $10-20/month
+
+---
+
+## **Important Notes**
+
+**1. Start WITHOUT these (add later):**
+- Native mobile app
+- Payment gateway
+- Complex booking system
+- Admin dashboard
+- Real-time chat
+
+**2. Use these FREE features:**
+- WhatsApp Business (click to chat)
+- Google Forms (initial provider onboarding)
+- Google Sheets (track early bookings manually)
+- Phone calls (direct contact)
+
+**3. Validation First:**
+- Get 10-20 providers registered
+- Get 50-100 users browsing
+- See if people actually use it
+- Then add advanced features
+
+---
+
+## **Reality Check**
+
+**What you CAN build free:**
+- Professional-looking website
+- Provider listings
+- Search and filter
+- User registration
+- Direct contact (call/WhatsApp)
+- Basic reviews
+
+**What needs payment later:**
+- Large-scale SMS notifications (>1000/day)
+- Heavy file storage (>5GB)
+- Video content
+- Advanced analytics
+- Native mobile app (can still do Progressive Web App free)
+
+---
+
+## **My Recommendation: Start with This**
+```
+Tech Stack:
+- Next.js (Frontend + API routes)
+- Supabase (Database + Auth + Storage)
+- Vercel (Hosting)
+- WhatsApp Business API (Free click-to-chat)
+- Cloudinary (Images)
+
+Total Cost: $0
+Time to Build: 2-3 weeks
+Can Handle: 500-1000 users
+
+Ready for cursor prompts? Let me know and I'll give you step-by-step prompts to build:
+
+Project setup
+Frontend pages
+Backend APIs
+Database schema
+Deployment
+
+Just reply "yes, give me cursor prompts" and specify which option you prefer (Supabase, Firebase, or Custom Backend).yes, give me cursor prompt for all at once1:14 PMOrchestrated comprehensive cursor prompts for rural services app development.The user wants all cursor prompts at once to build the rural services app. I should provide comprehensive, step-by-step cursor prompts that cover:
+
+Project setup
+Frontend pages and components
+Backend APIs
+Database schema
+Deployment
+
+I'll go with the recommended stack (Next.js + Supabase) as it's the easiest and most beginner-friendly. I'll provide detailed prompts that can be copy-pasted into Cursor AI.
+I should organize this clearly with numbered sections and make sure each prompt is complete and actionable.Complete Cursor Prompts for Rural Services App
+Copy and paste these prompts into Cursor AI one by one in order. Read the output after each prompt before moving to the next.
+
+🚀 PART 1: Project Setup
+Prompt 1: Initialize Project
+Create a new Next.js 14 project called "gaon-seva" with the following setup:
+- Use TypeScript
+- Use App Router (not Pages Router)
+- Install and configure Tailwind CSS
+- Install these dependencies: @supabase/supabase-js, @supabase/auth-helpers-nextjs, lucide-react (for icons)
+- Create a basic folder structure:
+  - /app (routes)
+  - /components (reusable components)
+  - /lib (utilities and supabase client)
+  - /types (TypeScript types)
+- Create a .env.local file with placeholders for NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_ANON_KEY
+- Set up a clean, modern Tailwind config with custom colors for a rural/agricultural theme (greens, earthy tones)
+
+Prompt 2: Create Supabase Client
+Create a Supabase client configuration in /lib/supabase.ts that:
+- Exports a configured Supabase client using the environment variables
+- Includes proper TypeScript types
+- Has error handling for missing environment variables
+- Also create a browser client and server client for Next.js 14 App Router compatibility
+
+🎨 PART 2: Frontend - Core Pages
+Prompt 3: Home Page (Landing Page)
+Create a landing page at /app/page.tsx for "Gaon Seva" - a rural services marketplace. Include:
+
+1. Hero Section:
+   - Catchy headline in both English and Hindi: "Gaon Seva - आपके गांव की हर सेवा"
+   - Subheading explaining the app
+   - Two CTA buttons: "Find Services" and "Become a Provider"
+   - Hero image/illustration placeholder
+
+2. Service Categories Grid (12 categories):
+   - Home Services, Agriculture, Healthcare, Transport, Events, Professional Help, Construction, Education, Beauty, Security, Daily Essentials, Digital Services
+   - Each category with an icon (use lucide-react icons), title, and short description
+   - Make them clickable cards with hover effects
+
+3. How It Works Section:
+   - 3 simple steps with icons
+   - For Customers: Browse → Contact → Get Service
+   - For Providers: Register → Get Leads → Earn Money
+
+4. Features Section:
+   - Verified Providers
+   - Local Language Support
+   - Direct Contact
+   - Community Ratings
+
+5. Call to Action:
+   - Register as provider or find services
+
+Use a clean, mobile-first responsive design with Tailwind CSS. Use earthy colors (greens, browns, oranges). Make it look professional but simple.
+
+Prompt 4: Navigation Component
+Create a responsive navigation component at /components/Navbar.tsx with:
+- Logo/brand name "Gaon Seva"
+- Navigation links: Home, Services, Become a Provider, About
+- Language toggle button (English/Hindi) - just UI for now
+- Login/Signup buttons
+- Mobile hamburger menu that works on small screens
+- Sticky header with shadow on scroll
+- Use Tailwind CSS and lucide-react icons
+
+Prompt 5: Service Categories Page
+Create a services browsing page at /app/services/page.tsx that includes:
+
+1. Page Header:
+   - Title: "Browse Services"
+   - Subtitle explaining the page
+
+2. Search and Filter Section:
+   - Search bar (by service name or provider name)
+   - Category dropdown filter (all 12 categories)
+   - Location filter (by village/block)
+   - Sort by: Rating, Price (Low to High), Newest
+
+3. Service Provider Cards Grid:
+   - Show sample data for 6-8 providers with:
+     * Provider photo placeholder
+     * Name
+     * Service category
+     * Experience (years)
+     * Rating (stars)
+     * Price range
+     * Location (village)
+     * Availability status (Available/Busy)
+     * Contact buttons (Call & WhatsApp)
+   - Responsive grid (1 column mobile, 2 tablet, 3 desktop)
+   - Hover effects and smooth animations
+
+4. Pagination or "Load More" button
+
+Use Tailwind CSS and make it mobile-responsive. Add sample dummy data for now.
+
+Prompt 6: Service Provider Detail Page
+Create a dynamic service provider detail page at /app/services/[id]/page.tsx that shows:
+
+1. Provider Profile Section:
+   - Large profile photo
+   - Name, service category, experience
+   - Rating with review count
+   - Verified badge if verified
+   - Location details
+   - Price range
+   - Availability status
+
+2. About Section:
+   - Detailed description
+   - Skills/specializations list
+   - Years of experience
+   - Service area (villages covered)
+
+3. Photos Gallery:
+   - Grid of work photos (4-6 photos)
+   - Lightbox view on click
+
+4. Reviews Section:
+   - Average rating breakdown (5 stars, 4 stars, etc.)
+   - List of recent reviews with:
+     * Reviewer name
+     * Rating
+     * Comment
+     * Date
+   - "Write a Review" button
+
+5. Contact Section (Prominent):
+   - Large WhatsApp button (opens WhatsApp with pre-filled message)
+   - Call button (tel: link)
+   - "Request Booking" button
+
+6. Similar Providers Section:
+   - Show 3-4 other providers in same category
+   - In same location
+
+Use sample dummy data for now. Make it visually appealing and mobile-responsive.
+
+Prompt 7: Registration Forms
+Create two registration pages:
+
+1. Service Provider Registration at /app/register/provider/page.tsx:
+   - Multi-step form (3 steps):
+   
+   Step 1 - Basic Info:
+   - Full Name
+   - Phone Number (with validation for 10 digits)
+   - WhatsApp Number
+   - Village/Location
+   - Block/Tehsil
+   - District
+   
+   Step 2 - Service Details:
+   - Service Category (dropdown of all 12 categories)
+   - Specific Services (checkboxes based on category)
+   - Experience (in years)
+   - Price Range (₹ min - max)
+   - Service Area (which villages you serve)
+   - Availability
+   
+   Step 3 - Additional Info:
+   - Upload Profile Photo
+   - Upload Work Photos (up to 5)
+   - About/Description (textarea)
+   - Aadhaar Number (optional, for verification)
+   
+   - Progress indicator showing step 1/3, 2/3, 3/3
+   - Next/Previous buttons
+   - Form validation
+   - Submit button on final step
+
+2. Customer Registration at /app/register/customer/page.tsx:
+   - Simple single form:
+     * Full Name
+     * Phone Number
+     * Village/Location
+     * Password
+   - Submit button
+   - Link to provider registration
+
+Use Tailwind CSS forms, add proper validation, and make both forms mobile-responsive with good UX.
+
+Prompt 8: User Dashboard (Provider)
+Create a service provider dashboard at /app/dashboard/provider/page.tsx with:
+
+1. Dashboard Header:
+   - Welcome message with provider name
+   - Profile completion percentage
+
+2. Stats Cards Row:
+   - Total Leads/Contacts Received
+   - Profile Views This Month
+   - Average Rating
+   - Total Reviews
+
+3. Recent Inquiries Section:
+   - List of recent customer contacts with:
+     * Customer name
+     * Service requested
+     * Date & time
+     * Status (New/Contacted/Completed)
+     * Contact button
+
+4. Profile Management:
+   - Edit Profile button
+   - Toggle Availability (Available/Busy switch)
+   - View Public Profile link
+
+5. Reviews Section:
+   - Recent reviews list
+   - Overall rating
+
+6. Quick Actions:
+   - Update Photos
+   - Change Service Area
+   - View Analytics
+
+Use cards, proper spacing, and make it responsive. Add dummy data for now.
+
+Prompt 9: User Dashboard (Customer)
+Create a customer dashboard at /app/dashboard/customer/page.tsx with:
+
+1. Welcome Section:
+   - Personalized greeting
+   - Location display
+
+2. Quick Search:
+   - Search bar to find services
+   - Popular services quick links
+
+3. Recent Contacts Section:
+   - Providers you've contacted recently
+   - With service type, date, status
+   - Contact again buttons
+
+4. Saved Providers:
+   - Bookmarked/favorite providers
+   - Grid view with basic info
+   - Quick contact buttons
+
+5. Your Reviews:
+   - Reviews you've written
+   - Edit/delete options
+
+6. Profile Settings:
+   - Edit profile button
+   - Change location
+   - Notifications preferences
+
+Make it clean, simple, and mobile-friendly with Tailwind CSS.
+
+🗄️ PART 3: Backend - Database & APIs
+Prompt 10: Create Database Schema
+Create a Supabase database schema documentation file at /lib/database-schema.md that includes SQL commands to create these tables:
+
+1. profiles (extends Supabase auth.users):
+   - id (UUID, primary key, references auth.users)
+   - full_name (text)
+   - phone (text, unique)
+   - whatsapp_number (text)
+   - village (text)
+   - block (text)
+   - district (text)
+   - role (enum: 'customer', 'provider')
+   - created_at (timestamp)
+   - updated_at (timestamp)
+
+2. service_providers:
+   - id (UUID, primary key)
+   - user_id (UUID, references profiles)
+   - service_category (text)
+   - specific_services (text array)
+   - experience_years (integer)
+   - price_min (integer)
+   - price_max (integer)
+   - service_area (text array)
+   - about (text)
+   - profile_photo_url (text)
+   - work_photos (text array)
+   - aadhaar_number (text, encrypted)
+   - is_verified (boolean, default false)
+   - is_available (boolean, default true)
+   - rating_avg (decimal)
+   - rating_count (integer)
+   - view_count (integer)
+   - created_at (timestamp)
+   - updated_at (timestamp)
+
+3. contacts/leads:
+   - id (UUID, primary key)
+   - customer_id (UUID, references profiles)
+   - provider_id (UUID, references service_providers)
+   - service_type (text)
+   - message (text)
+   - contact_method (enum: 'call', 'whatsapp')
+   - status (enum: 'new', 'contacted', 'completed')
+   - created_at (timestamp)
+
+4. reviews:
+   - id (UUID, primary key)
+   - provider_id (UUID, references service_providers)
+   - customer_id (UUID, references profiles)
+   - lead_id (UUID, references contacts)
+   - rating (integer, 1-5)
+   - comment (text)
+   - created_at (timestamp)
+   - updated_at (timestamp)
+
+5. saved_providers:
+   - customer_id (UUID, references profiles)
+   - provider_id (UUID, references service_providers)
+   - created_at (timestamp)
+   - Primary key: (customer_id, provider_id)
+
+Include Row Level Security (RLS) policies for each table to ensure:
+- Users can only edit their own data
+- Anyone can read provider profiles
+- Only customers can create reviews
+- Providers can see their own leads
+
+Also create useful indexes for common queries.
+
+Prompt 11: TypeScript Types
+Create TypeScript type definitions at /types/database.types.ts for all database tables from the schema:
+- Profile
+- ServiceProvider
+- Contact/Lead
+- Review
+- SavedProvider
+
+Also create types for:
+- ServiceCategory (enum of all 12 categories)
+- UserRole
+- ContactStatus
+- Availability
+
+Use proper TypeScript syntax with optional fields where appropriate.
+
+Prompt 12: API Routes - Authentication
+Create authentication API routes using Supabase Auth:
+
+1. /app/api/auth/signup/route.ts:
+   - POST endpoint for user registration
+   - Accepts: email, password, full_name, phone, role, location details
+   - Creates Supabase auth user
+   - Creates profile record
+   - Returns user data and session
+
+2. /app/api/auth/login/route.ts:
+   - POST endpoint for login
+   - Accepts: email/phone and password
+   - Returns session token
+
+3. /app/api/auth/logout/route.ts:
+   - POST endpoint to logout
+   - Clears session
+
+4. /app/api/auth/session/route.ts:
+   - GET endpoint to get current session
+   - Returns user profile if authenticated
+
+Include proper error handling, validation, and TypeScript types.
+
+Prompt 13: API Routes - Service Providers
+Create service provider API routes:
+
+1. /app/api/providers/route.ts:
+   - GET: Fetch all service providers with optional filters:
+     * category
+     * location (village/block)
+     * search query
+     * availability
+     * sort (rating, newest, price)
+     * pagination (page, limit)
+   - POST: Create new service provider profile
+   - Include Supabase query with proper joins
+   - Return paginated results with total count
+
+2. /app/api/providers/[id]/route.ts:
+   - GET: Fetch single provider by ID
+   - Include all details, reviews, rating stats
+   - Increment view_count
+   - PUT: Update provider profile (only if owner)
+   - DELETE: Delete provider profile (only if owner)
+
+3. /app/api/providers/[id]/reviews/route.ts:
+   - GET: Fetch all reviews for a provider
+   - POST: Add new review (only customers who contacted)
+   - Calculate and update provider's average rating
+
+Use proper error handling, authentication checks, and TypeScript types.
+
+Prompt 14: API Routes - Contacts/Leads
+Create contact/lead tracking API routes:
+
+1. /app/api/contacts/route.ts:
+   - GET: Fetch contacts for logged-in user
+     * If provider: get all leads received
+     * If customer: get all providers contacted
+   - POST: Create new contact record when customer contacts provider
+   - Accepts: provider_id, service_type, message, contact_method
+
+2. /app/api/contacts/[id]/route.ts:
+   - GET: Fetch single contact details
+   - PUT: Update contact status (provider only)
+   - Accepts: status (contacted, completed)
+
+Include authentication checks and proper error handling.
+
+Prompt 15: API Routes - Saved Providers
+Create saved/bookmarked providers API routes:
+
+1. /app/api/saved/route.ts:
+   - GET: Fetch all saved providers for logged-in customer
+   - POST: Save/bookmark a provider
+   - Accepts: provider_id
+
+2. /app/api/saved/[providerId]/route.ts:
+   - DELETE: Remove provider from saved list
+
+Include authentication checks (customers only).
+
+Prompt 16: API Routes - Search & Categories
+Create search and category API routes:
+
+1. /app/api/search/route.ts:
+   - GET: Global search across providers
+   - Accepts: query (searches name, services, location)
+   - Returns: matching providers with highlights
+
+2. /app/api/categories/route.ts:
+   - GET: Fetch all service categories with:
+     * Category name
+     * Icon name
+     * Description
+     * Provider count in each category
+   - Return static data for 12 categories
+
+3. /app/api/stats/route.ts:
+   - GET: Fetch platform statistics:
+     * Total providers
+     * Total users
+     * Services available
+     * Villages covered
+   - For homepage display
+
+Use proper TypeScript and error handling.
+
+📤 PART 4: Image Upload & Storage
+Prompt 17: Image Upload Utility
+Create an image upload utility at /lib/upload.ts that:
+
+1. Handles image uploads to Supabase Storage
+2. Creates proper folder structure:
+   - /profiles/{user_id}/
+   - /work-photos/{provider_id}/
+3. Validates:
+   - File type (only jpg, jpeg, png, webp)
+   - File size (max 5MB)
+4. Compresses images before upload
+5. Generates unique filenames
+6. Returns public URL after upload
+7. Has function to delete images
+
+Also create a React component at /components/ImageUpload.tsx:
+- Drag & drop interface
+- Preview before upload
+- Progress indicator
+- Multiple file upload support
+- Delete uploaded images
+- Use Tailwind CSS for styling
+
+Include proper error handling and TypeScript types.
+
+🔐 PART 5: Authentication & Protected Routes
+Prompt 18: Authentication Context
+Create an authentication context at /lib/AuthContext.tsx that:
+
+1. Uses React Context API
+2. Provides:
+   - user (current user profile)
+   - session (Supabase session)
+   - loading state
+   - signUp() function
+   - signIn() function
+   - signOut() function
+   - updateProfile() function
+3. Listens to Supabase auth state changes
+4. Fetches user profile after authentication
+5. Exports useAuth() hook
+
+Also create a middleware at /middleware.ts:
+- Protects dashboard routes (/dashboard/*)
+- Redirects unauthenticated users to /login
+- Checks user role (provider/customer) and redirects appropriately
+
+Use TypeScript and proper error handling.
+
+Prompt 19: Login Page
+Create a login page at /app/login/page.tsx with:
+
+1. Login Form:
+   - Email or Phone field
+   - Password field
+   - "Remember me" checkbox
+   - Submit button
+   - Error message display
+
+2. Social Login Options (UI only for now):
+   - Google
+   - Facebook
+
+3. Links:
+   - "Forgot Password?"
+   - "Don't have an account? Sign up"
+
+4. Visual Design:
+   - Split screen layout (form on left, image/illustration on right)
+   - Mobile responsive (stacked on mobile)
+   - Use Tailwind CSS
+   - Add relevant rural/community themed imagery
+
+Integrate with AuthContext for actual authentication.
+
+📱 PART 6: Utility Functions & Components
+Prompt 20: Utility Functions
+Create utility functions at /lib/utils.ts:
+
+1. formatPhone(phone: string): Format phone number to +91-XXXXX-XXXXX
+2. formatPrice(min: number, max: number): Format price range as ₹X,XXX - ₹X,XXX
+3. timeAgo(date: Date): Convert date to "2 days ago", "1 month ago", etc.
+4. getWhatsAppLink(phone: string, message: string): Generate WhatsApp click-to-chat URL
+5. truncateText(text: string, length: number): Truncate with ellipsis
+6. validatePhone(phone: string): Validate Indian phone number
+7. validateAadhaar(aadhaar: string): Validate Aadhaar format
+8. generateSlug(text: string): Create URL-friendly slug
+9. getInitials(name: string): Get initials for avatar placeholder
+10. cn(...inputs): Tailwind class merger (use clsx and tailwind-merge)
+
+Include JSDoc comments and TypeScript types for all functions.
+
+Prompt 21: Reusable UI Components
+Create reusable UI components in /components/:
+
+1. Button.tsx:
+   - Variants: primary, secondary, outline, ghost
+   - Sizes: sm, md, lg
+   - Loading state
+   - Disabled state
+   - Icon support
+
+2. Card.tsx:
+   - Basic card container
+   - With header, body, footer slots
+   - Hover effects optional
+
+3. Input.tsx:
+   - Text input with label
+   - Error message display
+   - Icon support (left/right)
+   - Variants: default, error
+
+4. Select.tsx:
+   - Dropdown select with label
+   - Error message display
+   - Searchable option
+
+5. Rating.tsx:
+   - Star rating display (read-only)
+   - Interactive star rating (for reviews)
+   - Half-star support
+   - Size variants
+
+6. Badge.tsx:
+   - Status badges
+   - Variants: success, warning, error, info
+   - Sizes: sm, md, lg
+
+7. Modal.tsx:
+   - Reusable modal/dialog
+   - Backdrop click to close
+   - Close button
+   - Customizable content
+
+8. LoadingSpinner.tsx:
+   - Loading indicator
+   - Sizes: sm, md, lg
+   - Full page overlay option
+
+Use Tailwind CSS, make them accessible (ARIA labels), and fully typed with TypeScript.
+
+Prompt 22: Service Provider Card Component
+Create a ServiceProviderCard component at /components/ServiceProviderCard.tsx that:
+
+1. Displays:
+   - Provider photo (with fallback to initials)
+   - Name
+   - Service category with icon
+   - Rating stars with count
+   - Experience badge
+   - Location
+   - Price range
+   - Availability status (green dot for available)
+   - Verified badge if verified
+
+2. Actions:
+   - Click card to view full profile
+   - Save/bookmark button (heart icon)
+   - Quick contact button (WhatsApp icon)
+
+3. Features:
+   - Hover effects (lift/shadow)
+   - Responsive design
+   - Skeleton loading state
+   - Lazy load images
+
+Use Tailwind CSS and lucide-react icons. Make it reusable with TypeScript props.
+
+Prompt 23: Search & Filter Component
+Create a SearchFilter component at /components/SearchFilter.tsx that:
+
+1. Search Input:
+   - Text search with icon
+   - Debounced search (300ms delay)
+   - Clear button
+
+2. Filters:
+   - Category dropdown (multi-select)
+   - Location input (with suggestions)
+   - Price range slider
+   - Availability toggle
+   - Rating filter (4+ stars, 3+ stars, etc.)
+
+3. Sort Options:
+   - Dropdown: Relevance, Rating, Newest, Price Low-High
+
+4. Active Filters Display:
+   - Show selected filters as removable badges
+   - "Clear All" button
+
+5. Mobile:
+   - Collapsible filter panel
+   - Filter button with active count badge
+   - Bottom sheet on mobile
+
+Use Tailwind CSS and make it fully functional with state management. Export filter values via props/callback.
+
+🌐 PART 7: WhatsApp & Contact Integration
+Prompt 24: Contact Integration
+Create contact utility functions at /lib/contact.ts:
+
+1. initiateWhatsAppChat():
+   - Accepts: phone number, provider name, service type
+   - Generates pre-filled message: "Hi [Name], I need [Service] in [Location]. Can you help?"
+   - Opens WhatsApp with message
+   - Tracks contact in database
+   - Returns tracking ID
+
+2. initiatePhoneCall():
+   - Accepts: phone number
+   - Opens tel: link
+   - Tracks contact in database
+   - Returns tracking ID
+
+3. trackContact():
+   - Logs contact attempt
+   - Increments provider contact count
+   - Stores in contacts table
+
+Also create a ContactProvider component at /components/ContactProvider.tsx:
+- Shows provider contact options in a modal
+- WhatsApp button (green)
+- Call button (blue)
+- Message preview
+- Terms note: "By contacting, you agree to share your number"
+- After contact, show "Request Sent!" confirmation
+- Close button
+
+Use proper TypeScript types and integrate with API routes.
+
+⚡ PART 8: Performance & SEO
+Prompt 25: SEO Configuration
+Set up SEO optimization:
+
+1. Create /app/layout.tsx with:
+   - Meta tags (title, description, keywords)
+   - Open Graph tags
+   - Twitter Card tags
+   - Favicon configuration
+   - Google Fonts (if needed)
+   - Viewport meta
+
+2. Create /lib/seo.ts with:
+   - generateMetadata() helper function
+   - Schema.org JSON-LD generator for:
+     * Local Business
+     * Service
+     * Review
+     * Person (provider profile)
+
+3. Add dynamic metadata to:
+   - Service provider detail pages
+   - Category pages
+   - Location pages
+
+4. Create robots.txt
+5. Create sitemap.xml (dynamic)
+
+Ensure all pages have unique titles and descriptions.
+
+Prompt 26: Performance Optimization
+Implement performance optimizations:
+
+1. Create /lib/imageOptimization.ts:
+   - Use Next.js Image component everywhere
+   - Lazy load images
+   - Blur placeholder support
+   - WebP format conversion
+
+2. Implement code splitting:
+   - Dynamic imports for heavy components
+   - Lazy load modal components
+   - Lazy load dashboard sections
+
+3. Add loading states:
+   - Skeleton loaders for cards
+   - Suspense boundaries
+   - Loading.tsx for each route
+
+4. Optimize Supabase queries:
+   - Add proper indexes
+   - Use select() to fetch only needed fields
+   - Implement pagination everywhere
+   - Cache frequently accessed data
+
+5. Add /lib/cache.ts:
+   - React Query setup (optional)
+   - Cache service categories
+   - Cache user session
+
+Document all optimizations in /PERFORMANCE.md
+
+📊 PART 9: Analytics & Tracking
+Prompt 27: Analytics Setup
+Create analytics tracking at /lib/analytics.ts:
+
+1. Event tracking functions:
+   - trackPageView(page: string)
+   - trackSearch(query: string, resultsCount: number)
+   - trackProviderView(providerId: string)
+   - trackContact(providerId: string, method: string)
+   - trackRegistration(role: string)
+   - trackReview(providerId: string, rating: number)
+
+2. Integrate Google Analytics 4 (GA4):
+   - Create GA4 wrapper
+   - Track custom events
+   - Track user journey
+
+3. Create internal analytics dashboard (basic):
+   - Store events in Supabase
+   - Create analytics table
+   - Create API route: /api/analytics/route.ts
+   - Show in admin view:
+     * Total views
+     * Top providers
+     * Popular categories
+     * Contact conversion rate
+
+4. Privacy compliance:
+   - Cookie consent banner
+   - Opt-out option
+   - Privacy policy page
+
+Keep it GDPR/privacy compliant.
+
+🎯 PART 10: Final Polish
+Prompt 28: Error Handling & Validation
+Implement comprehensive error handling:
+
+1. Create /lib/errors.ts:
+   - Custom error classes
+   - Error messages in English & Hindi
+   - Error logging function
+
+2. Create error boundaries:
+   - /app/error.tsx (global error page)
+   - /app/not-found.tsx (404 page)
+   - Component-level error boundaries
+
+3. Form validation:
+   - Create /lib/validation.ts with Zod schemas:
+     * Provider registration schema
+     * Customer registration schema
+     * Review schema
+     * Contact schema
+   - Client-side & server-side validation
+
+4. Create toast notifications:
+   - /components/Toast.tsx
+   - Success, error, warning, info variants
+   - Auto-dismiss option
+   - Use React Context for global toasts
+
+5. Loading states everywhere:
+   - Button loading states
+   - Page loading states
+   - Skeleton loaders
+
+Add user-friendly error messages with helpful suggestions.
+
+Prompt 29: Mobile Responsiveness Check
+Audit and fix mobile responsiveness:
+
+1. Review all pages at breakpoints:
+   - Mobile (320px, 375px, 425px)
+   - Tablet (768px, 1024px)
+   - Desktop (1280px, 1440px, 1920px)
+
+2. Fix common issues:
+   - Navigation menu on mobile
+   - Form layouts on small screens
+   - Card grids (1 col mobile, 2 tablet, 3+ desktop)
+   - Modal sizes
+   - Image sizing
+   - Font sizes (use responsive Tailwind classes)
+   - Touch targets (min 44px)
+
+3. Add mobile-specific features:
+   - Pull-to-refresh (optional)
+   - Bottom navigation (optional)
+   - Swipe gestures where appropriate
+   - Click-to-call buttons prominent on mobile
+
+4. Test and document:
+   - Create /RESPONSIVE.md with screenshots
+   - Document any mobile-specific behavior
+
+Ensure excellent mobile UX as most rural users will access via phone.
+
+Prompt 30: Testing Data & Documentation
+Create testing setup and documentation:
+
+1. Create /lib/seedData.ts:
+   - Generate 20-30 sample service providers across all categories
+   - Generate sample reviews
+   - Generate sample contacts
+   - Include realistic Indian names, villages, prices
+   - Create a seed script that populates Supabase
+
+2. Create documentation files:
+   
+   /README.md:
+   - Project overview
+   - Tech stack
+   - Setup instructions
+   - Environment variables needed
+   - How to run locally
+   - Deployment instructions
+   
+   /CONTRIBUTING.md:
+   - Code style guide
+   - How to add new features
+   - How to add new service categories
+   
+   /API-DOCS.md:
+   - All API endpoints
+   - Request/response examples
+   - Authentication requirements
+   
+   /USER-GUIDE.md:
+   - How to register as provider
+   - How to find services
+   - How to contact providers
+   - How to leave reviews
+
+3. Create a local development guide
+
+Make documentation clear and beginner-friendly.
+
+🚀 PART 11: Deployment
+Prompt 31: Environment Configuration
+Set up environment configuration for deployment:
+
+1. Create .env.example with all required variables:
+   - NEXT_PUBLIC_SUPABASE_URL
+   - NEXT_PUBLIC_SUPABASE_ANON_KEY
+   - SUPABASE_SERVICE_ROLE_KEY (for server)
+   - NEXT_PUBLIC_SITE_URL
+   - NEXT_PUBLIC_GA_ID (Google Analytics)
+
+2. Create separate configs:
+   - .env.local (local development)
+   - .env.production (Vercel environment variables)
+
+3. Update next.config.js:
+   - Add image domains (Supabase Storage, Cloudinary)
+   - Add security headers
+   - Add redirects if needed
+   - Enable compression
+
+4. Create deployment checklist:
+   - Supabase project setup
+   - Database migrations run
+   - RLS policies enabled
+   - Storage buckets created
+   - Environment variables set in Vercel
+   - Custom domain configured
+   - SSL certificate
+
+Document everything in /DEPLOYMENT.md
+
+Prompt 32: Vercel Deployment Setup
+Prepare for Vercel deployment:
+
+1. Create vercel.json config:
+   - Set build command
+   - Set output directory
+   - Set environment variables
+   - Set redirects/rewrites if needed
+
+2. Optimize for production:
+   - Enable Next.js Image optimization
+   - Enable automatic caching
+   - Set up proper headers
+   - Enable compression
+
+3. Create deployment scripts in package.json:
+   - "deploy": "vercel --prod"
+   - "deploy:preview": "vercel"
+
+4. Set up Supabase for production:
+   - Create production project
+   - Run migrations
+   - Set up RLS policies
+   - Configure storage
+
+5. Create post-deployment checklist:
+   - Test all features
+   - Check mobile responsiveness
+   - Verify API routes work
+   - Test authentication flow
+   - Check image uploads
+   - Test WhatsApp links
+   - Test phone links
+   - Check analytics tracking
+
+Document deployment steps in /DEPLOYMENT.md
+
+Prompt 33: Supabase Database Migration
+Create Supabase migration files:
+
+1. In /supabase/migrations/:
+   - 001_initial_schema.sql (all table creation)
+   - 002_rls_policies.sql (Row Level Security)
+   - 003_storage_buckets.sql (create storage buckets)
+   - 004_indexes.sql (performance indexes)
+   - 005_functions.sql (useful database functions)
+
+2. Create helper functions in SQL:
+   - update_provider_rating() - automatically update rating avg
+   - increment_view_count() - increment on profile view
+   - search_providers() - full text search function
+
+3. Create RLS policies for security:
+   - Users can read all provider profiles
+   - Users can only edit their own profile
+   - Only authenticated users can create contacts
+   - Only customers who contacted can review
+   - Providers can see their own leads
+
+4. Create storage buckets:
+   - profile-photos (public read)
+   - work-photos (public read)
+   - Set size limits (5MB per file)
+   - Set file type restrictions
+
+5. Create seed data SQL:
+   - Insert sample categories
+   - Insert sample providers
+   - Insert sample reviews
+
+Include rollback scripts for each migration.
+
+Prompt 34: Progressive Web App (PWA) Setup
+Convert to Progressive Web App:
+
+1. Create /public/manifest.json:
+   - App name: "Gaon Seva"
+   - Short name: "Gaon Seva"
+   - Description
+   - Icons (192x192, 512x512)
+   - Start URL
+   - Display: standalone
+   - Theme color
+   - Background color
+
+2. Create service worker at /public/sw.js:
+   - Cache static assets
+   - Cache API responses
+   - Offline fallback page
+   - Background sync (for contacts)
+
+3. Add to /app/layout.tsx:
+   - Link to manifest
+   - Theme color meta
+   - Apple touch icons
+
+4. Create install prompt:
+   - Detect if installable
+   - Show custom install banner
+   - Handle install event
+
+5. Add offline features:
+   - Show offline indicator
+   - Queue contacts for when online
+   - Cache provider list for offline viewing
+   - Show "You're offline" message
+
+6. Create icons:
+   - /public/icon-192.png
+   - /public/icon-512.png
+   - /public/apple-touch-icon.png
+   - /public/favicon.ico
+
+Test PWA functionality and document in /PWA.md
+
+🎨 PART 12: UI/UX Polish
+Prompt 35: Animations & Micro-interactions
+Add animations and micro-interactions:
+
+1. Install framer-motion
+
+2. Add animations to:
+   - Page transitions (fade in)
+   - Card hover effects (lift + shadow)
+   - Button hover/click states
+   - Modal open/close (scale + fade)
+   - Toast notifications (slide in)
+   - Loading states (pulse, spin)
+   - Success states (checkmark animation)
+   - List item stagger (appear one by one)
+
+3. Create animation utilities at /lib/animations.ts:
+   - fadeIn, fadeOut
+   - slideIn (from directions)
+   - scaleUp, scaleDown
+   - stagger (for lists)
+
+4. Add smooth scrolling:
+   - Scroll to top button
+   - Smooth anchor links
+   - Parallax effects (subtle)
+
+5. Add haptic feedback (mobile):
+   - Button clicks
+   - Success actions
+   - Errors
+
+Keep animations subtle and performant (60fps). Don't overdo it.
+
+Prompt 36: Accessibility (a11y) Improvements
+Improve accessibility:
+
+1. Audit and fix:
+   - All images have alt text
+   - Forms have proper labels
+   - Buttons have descriptive text/aria-labels
+   - Sufficient color contrast (WCAG AA)
+   - Keyboard navigation works everywhere
+   - Focus indicators visible
+   - Skip to content link
+
+2. Add ARIA attributes:
+   - aria-label for icon buttons
+   - aria-expanded for dropdowns
+   - aria-live for dynamic content
+   - role attributes where needed
+
+3. Screen reader testing:
+   - Test with NVDA/JAWS
+   - Ensure logical reading order
+   - Announce page changes
+   - Describe images meaningfully
+
+4. Create /components/SkipToContent.tsx:
+   - Skip navigation link
+   - Hidden but focusable
+
+5. Add keyboard shortcuts:
+   - / to focus search
+   - Esc to close modals
+   - Arrow keys for navigation
+
+6. Test with:
+   - Lighthouse accessibility audit
+   - axe DevTools
+   - Keyboard only (no mouse)
+
+Document in /ACCESSIBILITY.md
+
+🌍 PART 13: Localization (Hindi Support)
+Prompt 37: Multi-language Support
+Add Hindi language support:
+
+1. Install next-intl or react-i18next
+
+2. Create translation files:
+   - /locales/en.json (English)
+   - /locales/hi.json (Hindi)
+
+3. Translate all text:
+   - Navigation menu
+   - Button labels
+   - Form labels and placeholders
+   - Error messages
+   - Success messages
+   - Page titles and descriptions
+   - Service categories
+   - Common phrases
+
+4. Create language switcher:
+   - /components/LanguageToggle.tsx
+   - Toggle between EN/HI
+   - Store preference in localStorage
+   - Update document lang attribute
+
+5. Update all components to use translations:
+   - Replace hardcoded text with t('key')
+   - Ensure dates/numbers formatted correctly
+   - RTL support (not needed for Hindi)
+
+6. Special considerations:
+   - Use Devanagari fonts for Hindi
+   - Larger font size for Hindi text
+   - Test Hindi text doesn't overflow
+
+Keep English as default. Make switching seamless.
+
+📈 PART 14: Admin Features
+Prompt 38: Admin Dashboard
+Create admin dashboard at /app/admin/page.tsx:
+
+(Protect with admin role check)
+
+1. Overview Stats:
+   - Total users (customers + providers)
+   - Total providers by category
+   - Total reviews
+   - Total contacts made
+   - Growth charts (weekly/monthly)
+
+2. Provider Management:
+   - List all providers
+   - Verify/unverify providers
+   - Ban/suspend providers
+   - Edit provider details
+   - View provider stats
+
+3. User Management:
+   - List all users
+   - Ban/suspend users
+   - View user activity
+
+4. Content Moderation:
+   - Review flagged content
+   - Review pending verifications
+   - Approve/reject provider photos
+
+5. Analytics:
+   - Most viewed providers
+   - Most contacted categories
+   - Popular locations
+   - Conversion rates
+   - Revenue (if applicable)
+
+6. System Health:
+   - API response times
+   - Error logs
+   - Storage usage
+   - Database size
+
+Use tables, charts (Recharts), and cards. Make it functional and clean.
+
+Prompt 39: Admin Verification System
+Create provider verification system:
+
+1. Create verification workflow:
+   - Provider submits Aadhaar & documents
+   - Admin reviews submission
+   - Admin verifies/rejects
+   - Provider gets notified
+
+2. Create /app/admin/verifications/page.tsx:
+   - List pending verifications
+   - Show provider details
+   - Show uploaded documents
+   - Approve/Reject buttons
+   - Add verification notes
+
+3. Add verification badge:
+   - Blue checkmark on verified profiles
+   - Shows "Verified Provider" tooltip
+   - Verified badge on search results
+   - Filter by verified providers
+
+4. Create API routes:
+   - POST /api/admin/verify/:providerId
+   - POST /api/admin/reject/:providerId
+   - GET /api/admin/verifications/pending
+
+5. Notification system:
+   - Email/SMS on verification status change
+   - In-app notification
+
+Document verification criteria in /VERIFICATION-POLICY.md
+
+🔔 PART 15: Notifications
+Prompt 40: Notification System
+Create notification system:
+
+1. Database table (add to schema):
+   - notifications table:
+     * id
+     * user_id
+     * type (contact, review, verification, etc.)
+     * title
+     * message
+     * is_read
+     * link (optional)
+     * created_at
+
+2. Create /lib/notifications.ts:
+   - sendNotification(userId, type, data)
+   - markAsRead(notificationId)
+   - getUnreadCount(userId)
+   - getNotifications(userId, limit)
+
+3. Create notification UI:
+   - /components/NotificationBell.tsx:
+     * Bell icon with unread count badge
+     * Dropdown list of notifications
+     * Mark as read on click
+     * "View All" link
+   
+   - /app/notifications/page.tsx:
+     * Full notifications list
+     * Filter by type
+     * Mark all as read
+     * Delete option
+
+4. Trigger notifications for:
+   - New contact received (provider)
+   - Review received (provider)
+   - Verification approved/rejected (provider)
+   - Saved provider is now available (customer)
+
+5. Optional: Push notifications:
+   - Service worker push API
+   - Request permission
+   - Send via API
+
+Keep notifications relevant and not spammy.
+
+🛠️ PART 16: Final Testing & Launch
+Prompt 41: Testing Checklist
+Create comprehensive testing checklist at /TESTING.md:
+
+1. Functional Testing:
+   ✓ User can register as customer
+   ✓ User can register as provider
+   ✓ User can login/logout
+   ✓ User can browse services
+   ✓ User can search/filter
+   ✓ User can view provider details
+   ✓ User can contact provider (WhatsApp/Call)
+   ✓ Contact is tracked in database
+   ✓ User can save providers
+   ✓ User can write reviews
+   ✓ Provider can edit profile
+   ✓ Provider can toggle availability
+   ✓ Provider can see leads
+   ✓ Admin can verify providers
+   ✓ Image upload works
+   ✓ Notifications work
+
+2. UI Testing:
+   ✓ All pages load correctly
+   ✓ No broken images
+   ✓ No console errors
+   ✓ Forms validate properly
+   ✓ Error messages display
+   ✓ Success messages display
+   ✓ Loading states show
+
+3. Responsive Testing:
+   ✓ Works on mobile (320px - 480px)
+   ✓ Works on tablet (768px - 1024px)
+   ✓ Works on desktop (1280px+)
+   ✓ Touch targets are large enough
+   ✓ Text is readable on all sizes
+
+4. Browser Testing:
+   ✓ Chrome
+   ✓ Firefox
+   ✓ Safari
+   ✓ Mobile browsers
+
+5. Performance Testing:
+   ✓ Lighthouse score >90
+   ✓ Page load < 3 seconds
+   ✓ Images optimized
+   ✓ No memory leaks
+
+6. Security Testing:
+   ✓ RLS policies working
+   ✓ API routes protected
+   ✓ XSS prevention
+   ✓ SQL injection prevention
+   ✓ File upload validation
+
+Create a testing script to run through all items.
+
+Prompt 42: Launch Preparation
+Prepare for launch:
+
+1. Create /LAUNCH-CHECKLIST.md:
+
+   Pre-launch:
+   ✓ All features tested
+   ✓ Database seeded with sample data
+   ✓ Environment variables set
+   ✓ Domain configured
+   ✓ SSL working
+   ✓ Analytics tracking working
+   ✓ Error logging setup
+   ✓ Backup strategy in place
+   ✓ Legal pages ready (Privacy, Terms)
+   
+   Launch day:
+   ✓ Deploy to production
+   ✓ Test production URL
+   ✓ Monitor error logs
+   ✓ Monitor analytics
+   ✓ Share with initial users
+   
+   Post-launch:
+   ✓ Collect user feedback
+   ✓ Fix critical bugs
+   ✓ Monitor performance
+   ✓ Plan next features
+
+2. Create legal pages:
+   - /app/privacy/page.tsx (Privacy Policy)
+   - /app/terms/page.tsx (Terms of Service)
+   - /app/about/page.tsx (About Us)
+   - /app/contact/page.tsx (Contact page)
+
+3. Create footer component:
+   - /components/Footer.tsx:
+     * Links to legal pages
+     * Social media links
+     * Copyright notice
+     * Language switcher
+
+4. Set up monitoring:
+   - Error tracking (Sentry free tier)
+   - Uptime monitoring (UptimeRobot)
+   - Analytics dashboard
+
+5. Create user onboarding:
+   - Welcome modal for first-time users
+   - Quick tutorial/tour
+   - Help documentation
+
+Document everything in launch checklist.
+
+✅ FINAL PROMPT - Integration & Review
+Prompt 43: Final Integration & Polish
+Final integration and review:
+
+1. Verify all components are connected:
+   - Frontend connects to backend APIs
+   - Authentication works end-to-end
+   - Database operations work
+   - File uploads work
+   - Notifications work
+   - Analytics track properly
+
+2. Code cleanup:
+   - Remove console.logs
+   - Remove unused imports
+   - Remove commented code
+   - Format all files with Prettier
+   - Check for TypeScript errors
+   - Fix all ESLint warnings
+
+3. Optimize bundle size:
+   - Run `npm run build` and check bundle size
+   - Lazy load large components
+   - Remove unused dependencies
+   - Tree-shake properly
+
+4. Final UI polish:
+   - Consistent spacing throughout
+   - Consistent colors
+   - Consistent fonts
+   - Smooth animations
+   - No layout shifts
+   - Fast loading indicators
+
+5. Create final documentation:
+   - Update README with latest info
+   - Document all environment variables
+   - Document all API endpoints
+   - Create user guide
+   - Create developer guide
+
+6. Create demo video:
+   - 2-3 minute walkthrough
+   - Show key features
+   - Show mobile responsiveness
+
+7. Prepare GitHub repository:
+   - Add proper .gitignore
+   - Add LICENSE file
+   - Add CONTRIBUTING.md
+   - Add CODE_OF_CONDUCT.md
+   - Create meaningful commits
+   - Tag first version (v1.0.0)
+
+Run final tests and ensure everything works perfectly before launch!
+
+🎯 BONUS: Post-Launch Features (Phase 2)
+Prompt 44: Advanced Features Roadmap
+Create roadmap for Phase 2 features at /ROADMAP.md:
+
+1. Payment Integration:
+   - Razorpay/PhonePe integration
+   - Online booking with payment
+   - Provider can set advance payment %
+   - Automatic reminders
+
+2. In-app Chat:
+   - Real-time messaging
+   - Image sharing
+   - Voice messages
+   - Chat notifications
+
+3. Booking System:
+   - Calendar integration
+   - Time slot booking
+   - Automatic confirmations
+   - Booking reminders (SMS/WhatsApp)
+
+4. Advanced Search:
+   - Map-based search
+   - Radius-based filtering
+   - AI-powered recommendations
+   - "People also viewed"
+
+5. Gamification:
+   - Provider badges (Top Rated, Fast Response)
+   - Customer loyalty program
+   - Referral rewards
+   - Leaderboards by category/location
+
+6. Business Features:
+   - Provider business profiles
+   - Multiple team members
+   - Service packages
+   - Subscription plans
+
+7. Community Features:
+   - Forum/discussion board
+   - Service tips & guides
+   - Success stories
+   - Video testimonials
+
+8. Analytics for Providers:
+   - Profile performance dashboard
+   - Lead conversion insights
+   - Best performing times
+   - Competitor analysis
+
+Document priority and estimated effort for each feature.
+
+📝 USAGE INSTRUCTIONS
+How to use these prompts:
+
+Setup your development environment first:
+
+Install Node.js (v18+)
+Install VS Code
+Install Cursor AI
+Create a Supabase account
+Create a GitHub repository
+
+
+Use prompts in order (1-43)
+
+Copy one prompt at a time
+Paste into Cursor AI
+Review the generated code
+Test before moving to next prompt
+
+
+After every 5-10 prompts:
+
+Test what you've built
+Commit to Git
+Make sure everything works
+
+
+Customize as needed:
+
+These prompts are comprehensive but adapt them
+Change colors, styles, text to match your vision
+Add/remove features based on priorities
+
+
+When stuck:
+
+Ask Cursor to explain the code
+Ask for debugging help
+Ask for alternative approaches
+
+
+Deployment (Prompts 31-33):
+
+Follow Supabase setup guide
+Set up Vercel account
+Connect and deploy
+
+
+
+
+💡 TIPS FOR SUCCESS
+
+Don't rush - Build methodically, test each feature
+Start small - Deploy basic version first, add features later
+Get feedback early - Show to 5-10 users after basic version
+Iterate - Improve based on real usage
+Document - Keep notes of issues and solutions
+Backup - Commit to Git regularly
+
