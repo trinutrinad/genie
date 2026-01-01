@@ -35,7 +35,6 @@ export default function ServicesPage() {
                     </div>
                     <h3 className="text-lg font-semibold text-gray-900">{category.name}</h3>
                   </div>
-                  <p className="mb-4 text-sm text-gray-600">{category.nameHi}</p>
                   <div className="space-y-2">
                     <p className="text-xs font-medium text-gray-500">Available Services:</p>
                     <ul className="space-y-1 text-sm text-gray-600">
