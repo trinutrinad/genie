@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Button } from '@/components/Button';
 import { Card, CardContent } from '@/components/Card';
 import { Navbar } from '@/components/Navbar';
@@ -17,26 +18,35 @@ export default function Home() {
     <div className="min-h-screen bg-gradient-to-b from-primary-50 to-white">
       <Navbar />
 
-      {/* Hero Section */}
-      <section className="container mx-auto px-4 py-16 md:py-24">
-        <div className="mx-auto max-w-4xl text-center">
-          <h1 className="mb-6 text-4xl font-bold tracking-tight text-gray-900 md:text-6xl">
+      {/* HERO IMAGE SECTION */}
+      <section className="relative h-screen w-full">
+        <Image
+          src="/images/genie.png"
+          alt="Genie Service Marketplace"
+          fill
+          priority
+          className="object-cover"
+        />
+
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-center px-4">
+          <h1 className="text-white text-4xl md:text-6xl font-bold mb-4">
             Genie
-            <br />
-            <span className="text-primary-600">Your Service Marketplace</span>
           </h1>
-          <p className="mb-8 text-xl text-gray-600 md:text-2xl">
-            Find trusted local service providers in your village. From home repair to agriculture,
-            healthcare to transport - connect with verified providers.
+
+          <p className="text-white text-lg md:text-xl max-w-2xl mb-6">
+            Your Service Marketplace
           </p>
-          <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
+
+          <div className="flex gap-4">
             <Link href="/services">
-              <Button size="lg" icon={<Search className="h-5 w-5" />}>
+              <Button className="bg-green-600 text-white px-6 py-3">
                 Find Services
               </Button>
             </Link>
+
             <Link href="/register/provider">
-              <Button size="lg" variant="outline" icon={<Users className="h-5 w-5" />}>
+              <Button className="bg-white text-green-700 px-6 py-3">
                 Become a Provider
               </Button>
             </Link>
